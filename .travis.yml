@@ -4,4 +4,4 @@ service:
 before_install:
     - docker build -t cmvl/docker-react -f Dockerfile.dev .
 script:
-    - docker run cmvl/docker-react npm run test -- --coverage    
+    - docker run -e CI=true cmvl/docker-react npm run test -- --coverage    
